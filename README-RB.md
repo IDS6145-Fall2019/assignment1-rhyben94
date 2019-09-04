@@ -32,8 +32,7 @@ IDS6145: Requirements Definition
 What is the User’s Need? 
 At the highest level, the need of individuals utilizing the subway system is to get from point A to point B. Although it may not be the highest priority of all users, it seems reasonable to assume that minimizing the time in transit is a shared goal of the majority. 
 
-![alt text](https://github.com/IDS6145-Fall2019/assignment1-rhyben94/tree/master/images/Subway-HighLevelRequireements.PNG)
-
+!(https://github.com/IDS6145-Fall2019/assignment1-rhyben94/tree/master/images/Subway-HighLevelRequirements.PNG)
 
 
 What is the Simuland? 
