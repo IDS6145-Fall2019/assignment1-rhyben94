@@ -1,5 +1,4 @@
 # Assignment 1 - Designing Models and Analyzing Data (Template)
-(remove: **text between brackets to be removed**)
 
 > * Participant name: Rhyse Bendell
 > * Project Title: HW1
@@ -29,13 +28,21 @@ The problem of human transportation is, of course, not a new one, and with the r
 
 IDS6145: Requirements Definition
 
-What is the User’s Need? 
+**What is the User’s Need? **
 At the highest level, the need of individuals utilizing the subway system is to get from point A to point B. Although it may not be the highest priority of all users, it seems reasonable to assume that minimizing the time in transit is a shared goal of the majority. 
 
-!(https://github.com/IDS6145-Fall2019/assignment1-rhyben94/tree/master/images/Subway-HighLevelRequirements.PNG)
+![HighLevel](images/Subway-HighLevelRequirements.PNG)
+
+Arguably, additional requirements could be considered such as comfort (e.g., the situation during rush hour during Japan may have developed to be culturally acceptable, but would probably discomfort most Westerners), lack of effort, and cost. Specifically, with regards to the escalators that lead to and from the subway cars a users needs may be generalized as: rate of access to transit, social comfort/human proximity, and reduction of effort (i.e. not having to walk). 
+
+**What is the Simuland?**
+Considering the Subway escalator problem, the system that needs to be simulated is not just the action of the escalators themselves, but also the flux of individuals passing through (rather, up and down) the escalators. The particular components that may be most relevant to such a simulation include the rate of passenger entrance from both ends of an escalator section (assuming that space in the subtending spaces has a limited capacity), the length of the escalators (could be operationalized as the rate at which passengers are passively transported from Onboard-->Offload), the number of people that can be packed onto any given escalator, the number of escalators available for exit or entry,and the ability of passengers to engage in active translation.
+
+![HighLevel](images/escalatorSimuland.PNG)
 
 
-What is the Simuland? 
+
+
 What needs to be learned about it? 
 What are the measures of effectiveness to be produced?
 
