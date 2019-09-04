@@ -40,11 +40,14 @@ Considering the Subway escalator problem, the system that needs to be simulated 
 
 ![HighLevel](images/escalatorSimuland.PNG)
 
+Including such variables in the simulated model allows for a several easily accesible "experiments." The entry and exit rates provide easy access to analysis of factors such as lull and rush periods as well as potential comparability between structural subway system designs that intentionally limit or promote passenger flow at either end. The characteristics of the modeled escalators themselves may additionally be modified: the number of passengers that can be accomodated by any given escalator, number of escalators, and passive translation rates for instance may provide insight into activiation patterns that may be appropriate for given entry/exit rates. 
 
 
+**What needs to be learned about it? **
+Naturally, this portion of any modeling approach is purely arbitrary: the only things that need to be learned about anything are what one wants to learn. The context of optimizing passenger transit in an overly populated society may drive a few desired learning objectives such as determining the maximum number of passengers that may be translated by a given existing system, the ideal escalator activation patterns (i.e., number dedicated to entry versus exit) to support optimum flow at a given set of passenger exit and entry rates, the optimum physical design of escalators to maximize passengers while maintaining safety (it could be that wider escalators with shallower steps could benefit max passenger levels, though there are mechanical considerations that may pose problems), or even the ideal behaviors of passengers that most benefits overall translation (e.g., the "please just stand" request discussed in IDS6145).
 
-What needs to be learned about it? 
-What are the measures of effectiveness to be produced?
+**What are the measures of effectiveness to be produced?**
+Taking the examples given above, the relevant metrics follow from the questions themselves: maximum number of passengers may be quantified as precisely that, a count of passengers, whereas something more abstract such as ideal behavior may yield a measure of effectiveness that is dependent on several metrics such as passenger count per relevant epoch, overall passenger comfort, and average passenger satisfaction (it may be that the majority of passengers prefer to engage in active translation, and that a purely passive translation system may optimize passenger count but reduce overall satisfaction). 
 
 ## (Part 1.2) Subway (My Problem) Model **(10%)**
 
