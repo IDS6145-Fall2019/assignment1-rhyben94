@@ -38,7 +38,7 @@ Arguably, additional requirements could be considered such as comfort (e.g., the
 **What is the Simuland?**
 Considering the Subway escalator problem, the system that needs to be simulated is not just the action of the escalators themselves, but also the flux of individuals passing through (rather, up and down) the escalators. The particular components that may be most relevant to such a simulation include the rate of passenger entrance from both ends of an escalator section (assuming that space in the subtending spaces has a limited capacity), the length of the escalators (could be operationalized as the rate at which passengers are passively transported from Onboard-->Offload), the number of people that can be packed onto any given escalator, the number of escalators available for exit or entry,and the ability of passengers to engage in active translation.
 
-![HighLevel](images/escalatorSimuland.PNG)
+![HighLevel](images/EscalatorSimuland.PNG)
 
 Including such variables in the simulated model allows for a several easily accesible "experiments." The entry and exit rates provide easy access to analysis of factors such as lull and rush periods as well as potential comparability between structural subway system designs that intentionally limit or promote passenger flow at either end. The characteristics of the modeled escalators themselves may additionally be modified: the number of passengers that can be accomodated by any given escalator, number of escalators, and passive translation rates for instance may provide insight into activiation patterns that may be appropriate for given entry/exit rates. 
 
