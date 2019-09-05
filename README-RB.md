@@ -6,7 +6,7 @@
 
 
 
-> * Project Title: HW1
+> * Project Title: The Subway Congestion Problem: High Flow and Movement Speeds
 
 
 
@@ -126,21 +126,30 @@ Here I'll focus on the problem of congestion during an arbitrary rush hour, and 
 
 ![HighLevel](images/SubwayExperimentDesign.PNG)
 
-## (Part 1.2) Subway (My Problem) Model **(10%)**
+## (Part 1.2) Subway Congestion Model **(10%)**
 
 
-* [**Object Diagram**](model/object_diagram.md) - provides the high level overview of components
+* [**Object Diagram**](model/object_diagram.md) - provides the high level overview of objects that will be needed for a detailed simulation of the subway congestion problem. 
 
 ![HighLevel](images/subway-object-diagram.PNG)
 
-* [**Class Diagram**](model/class_diagram.md) - provides details of (what are you providing details of)
+* [**Class Diagram**](model/class_diagram.md) - provides details of the components of the objects needed for the subway simulation. 
 
 ![HighLevel](images/subway-class-diagram.PNG)
 
-* [**Behavior Diagram**](model/behavior_diagram.md) - provides details of (what are you providing details of)
+* [**Behavior Diagram**](model/behavior_diagram.md) - provides details of the high level sequence of the problem space and, in this case, the movement of passengers through the space. 
 
-![HighLevel](images/subway-physical-reference.PNG)
 
+![HighLevel](images/subway-physical-problemspace.PNG)
+Although not necessary for the simulation itself, I find it helpful to reference a layout of the physical space in which objects are being simulated. The subway problem consists of agents being generated at either end of the escalator area (either entering or exiting) and proceeding through the space to the opposite end. For the sake of this simulation, I'll be treating Enter-->Exit as the positive direction of flow.
+
+![HighLevel](images/subway-behavior-diagram.PNG)
+Generally, passengers will be spawned at either end of the space (and imbued with properties such as "active passenger" and "entering passenger") and then increment through the space at predetermined rates (a base walk speed for all passengers) before arriving at the escalators. If an escalator along their direction of flow can accept a passenger, they will board the escalator and move at either the escalator's speed or that speed + and active walk speed (if they are an active passenger). After disembarking on the other side passengers will continue to move at their base walk speed. For simplicity's sake, passengers will always be able to disembark, but will only be spawned if the occupancy at their spawn location does not exceed capacity. 
+
+The simulation in this case is a psuedo-continuous as each passenger will be treated as an agent that may change its state at each time increment (dt). Accordingly, each of the functions detailed below may be executed at each time increment. 
+
+![HighLevel](images/subway-passenger-functions.PNG)
+![HighLevel](images/subway-area-functions.PNG)
 
 
 * [**Agent / User case** (if appropriate)](model/agent_usecase_diagram.md) - provides details of (what are you providing details of)
