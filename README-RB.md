@@ -177,31 +177,23 @@ You are expected to create the python files - the code should run without errors
 
 * Specify the independent and dependent input variables of your subway esclator model
 
-	* Assuming that input variables are the equivalent of the experimental design: the 2 IVs - Congestion, and Active Passenger Move Rate - respectively have 2 (Congestion: Low, High) & 3(Rate: Null, Low, High) levels. There is a single DV - passenger count - which is determined by the total number of passengers that pass through the subway terminal during the alloted time. 
+	(Assuming that input variables are the equivalent of the experimental design:) The 2 IVs - Congestion, and Active Passenger Move Rate - respectively have 2 (Congestion: Low, High) & 3(Rate: Null, Low, High) levels. There is a single DV - passenger count - which is determined by the total number of passengers that pass through the subway terminal during the alloted time. 
 
 * Specify where the data will come from measured subset of real data (empirical) or synthetic data
 
-	* The IVs will be determined from real world data that indicate reasonable values for "Low" versus "High" rates of passenger passage during rush hours as well as the rates at which active passengers may be expected to walk up or down escalators. The DV of passenger count will be produced only by the simulation unless real world data can be found that provides exact numbers for the IVs as well as associated DV outcomes for each level.
+	The IVs will be determined from real world data that indicate reasonable values for "Low" versus "High" rates of passenger passage during rush hours as well as the rates at which active passengers may be expected to walk up or down escalators. The DV of passenger count will be produced only by the simulation unless real world data can be found that provides exact numbers for the IVs as well as associated DV outcomes for each level.
 
 * What kind of statistics are important to capture this input data
 
-	* The necessary data for determining the IVs 
-
-
-
-
-
-
+	The necessary data for determining the IVs will be best informed by statistics regarding the count of passengers that pass into and out of a representative escalator section during low demand and high demand periods (the count can then be transformed into a rate by determining the period of time during which the count was gathered), and an estimate of the rate at which active passengers walk on the subway (will likely be just short of average walking speed - I'm sure statistics exist regarding average stair climbing/descending rates).
 
 * How do you plan to analyze the output of your model?
 
-
-
-	* The passenger count data produced for each level of the experimental design (6 cells total) will be compiled into a .csv file such that each row contains IV labels (e.g., LowCongest HighActiveRate) as well as an outcome count produced by the simulation when run at that IV set. That setup will allow me to import the data into JASP and run a one-way ANOVA to determine whether either of the manipulated variables had an effect on the outcome counts as well as whether there is a significant interaction between the variables (significance determined in this case by a null-hypothesis test associated with p values less then .05).
+	The passenger count data produced for each level of the experimental design (6 cells total) will be compiled into a .csv file such that each row contains IV labels (e.g., LowCongest HighActiveRate) as well as an outcome count produced by the simulation when run at that IV set. That setup will allow me to import the data into JASP and run a one-way ANOVA to determine whether either of the manipulated variables had an effect on the outcome counts as well as whether there is a significant interaction between the variables (significance determined in this case by a null-hypothesis test associated with p values less then .05).
 
 * What ways will you visualize your data - charts, and graphs you will create?
 
-    * The outcomes of this experiment will be best visualized as a combined bar chart including the mean count for each condition as well as an indication of standard error around those means. 
+    The outcomes of this experiment will be best visualized as a combined bar chart including the mean count for each condition as well as an indication of standard error around those means. 
 
 * What clever way will you visualize your output with a useful infographic?
 
@@ -213,185 +205,35 @@ You are expected to create the python files - the code should run without errors
 ## (Part 2.1) **P**ortable **O**rganic **T**rouble-free **S**elf-watering System (**POTS**) Model **(10%)**
 
 
-
-
-
-
-
 Here [**we provide an overview**](code/POTS_system/README.md) of the **P**ortable **O**rganic **T**rouble-free **S**elf-watering System (**POTS**) Model and provide a source code template for the code found in  [**the following folder**](code/POTS_system/). Please create a **class** diagram of this model (replace the placeholder diagram). (you can use paper and pencil or a digital tool).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 # Part 3: Data Analysis
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## (Part 3.1) - Real Data **(10%)**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Find a datasource that looks at part of this model - subway stations locations / escalator number, heights, widths / volume of passangers - ridership numbers   (*fits* - we are pretty loose here, it can be anything.)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 * Write up a paragraph that describes the data and how it fits into your system.
-
-
-
-
-
-
 
 * Load the data into Python
 
-
-
-
-
-
-
 * Calculate a few useful statistic on the data - keep it simple- STD, means, etc..., this is just designed * to get used to working with real data. Explain the insights you derive from these statistics.
-
-
-
-
-
-
 
 * Visualize the raw data - visualize a few critical aspects of the data to better describe what it is, what it is showing, and why its useful to your system.
 
 
-
-
-
-
-
 * Calculate and plot some summary statistics that better describe the data.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 (Add your plots and visualization here)
-
-
-
-
-
 
 
 (Put your data into the data directory)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## (Part 3.2) -  Plotting 2D Random Number Generators **(15%)**
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 This portion of the assignment looks at generating random numbers in Python and understanding how to properly plot them. Plot two different random numbers, pseudo random and quasi random, for five different N values. There should be 10 subplots, all properly formatted 2D plots. Note, each of the N points will have two coordinates, an x and a y, therefore you will need to generate two random numbers for each point. You should replace the image with your results in a simalar format. Discuss how the patterns differ. Feel free to change the N values from the suggested N values in the image to state your case.
