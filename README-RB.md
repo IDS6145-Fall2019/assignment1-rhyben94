@@ -146,157 +146,46 @@ Although not necessary for the simulation itself, I find it helpful to reference
 ![HighLevel](images/subway-behavior-diagram.PNG)
 Generally, passengers will be spawned at either end of the space (and imbued with properties such as "active passenger" and "entering passenger") and then increment through the space at predetermined rates (a base walk speed for all passengers) before arriving at the escalators. If an escalator along their direction of flow can accept a passenger, they will board the escalator and move at either the escalator's speed or that speed + and active walk speed (if they are an active passenger). After disembarking on the other side passengers will continue to move at their base walk speed. For simplicity's sake, passengers will always be able to disembark, but will only be spawned if the occupancy at their spawn location does not exceed capacity. 
 
-The simulation in this case is a psuedo-continuous as each passenger will be treated as an agent that may change its state at each time increment (dt). Accordingly, each of the functions detailed below may be executed at each time increment. 
+The simulation in this case is a psuedo-continuous as each passenger will be treated as an agent that may change its state at each time increment (dt). Accordingly, each of the functions detailed in the next section may be executed at each time increment. 
+
+* [**Agent / User case** (if appropriate)](model/agent_usecase_diagram.md) - User cases are not relevant to the simulation descibed here considering that the only user input is to change the IVs as appropriate to generate the simulated data. 
+
+
+
+## (Part 1.3) Subway Congestion Problem Simulation **(10%)**
+
+To actually run the Congestion Problem simulation I would setup a continuous simulation capable of creating passengers in the described subway space and imbuing them with the movement and action behaviors appropriate for each of the IVs. The passengers themselves would determine most of the behavior in the simulation as their motion through the spaces would lead directly to the final passenger count DV; however, the capacity of the spaces for a certain number of passengers would also play a role in causing congestion. 
+
+The general structure I would use would rely on a loop to increment through time (up to a certain amount of time, say 2 hours) after the initial variables of interest had been set: namely, the rate at which passengers should be spawned (to represent the amount of "rush" during a given rush hour), the probability that a given passenger may be an active passenger (i.e., the number of people that actually would choose to walk instead of ride on the escalator), the rate at which active passengers move, the capacity of each of the spaces for passengers, the size of each of the spaces, the number of entrance/exit escalators, and the capacity ratio of each escalator for active versus passive passengers. 
+
+By incrementing through time and keeping track of the number of passengers that succesfully pass through the simulated terminal, the simulation would produce the "passenger count" DV as a function of the specific IVs (active passenger movement rate, and rate of passengers attempting to enter/exit). Running the simulation multiple times for each IV set (or simply building an extra loop into the code to have it run several times for each IV) would produce a set of passenger counts for each IV, and as count data lends itself to analysis by ANOVA the simulation would facilitate the final experimental analysis by generating the entire data set. 
+
+
 
 ![HighLevel](images/subway-passenger-functions.PNG)
 ![HighLevel](images/subway-area-functions.PNG)
 
 
-* [**Agent / User case** (if appropriate)](model/agent_usecase_diagram.md) - provides details of (what are you providing details of)
-
-
-
-## (Part 1.3) Subway (My Problem) Simulation **(10%)**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-(remove: Describe how you would simulate this - including type of simulation, rough details, inputs, outputs, and how it will help you analyze your experimental hypothesis, or nullify your null hypothesis.)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## (Part 1.4) Subway City (My Problem) Model **(10%)**
-
-
-
-
-
-
-
-[**Code template**](code/README.md) - Starting coding framework for the (insert your exact problem here.)
-
-
-
-
-
+## (Part 1.4) Subway City Congestion Model **(10%)**
 
 
 You are expected to create the python files - the code should run without errors, create and object(s) for your system, but not provide function detail.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## (Part 1.5) Specifying the Inputs to a System **(10%)**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-(remove the below points once ideas are satisfied)
-
-
-
-
-
-
 
 * Specify the independent and dependent input variables of your subway esclator model
 
-
-
-	* 
-
-
-
-
-
-
+	* Assuming that input variables are the equivalent of the experimental design: the 2 IVs - Congestion, and Active Passenger Move Rate - respectively have 2 (Congestion: Low, High) & 3(Rate: Null, Low, High) levels. There is a single DV - passenger count - which is determined by the total number of passengers that pass through the subway terminal during the alloted time. 
 
 * Specify where the data will come from measured subset of real data (empirical) or synthetic data
 
-
-
-	* 
-
-
-
-
-
-
+	* The IVs will be determined from real world data that indicate reasonable values for "Low" versus "High" rates of passenger passage during rush hours as well as the rates at which active passengers may be expected to walk up or down escalators. The DV of passenger count will be produced only by the simulation unless real world data can be found that provides exact numbers for the IVs as well as associated DV outcomes for each level.
 
 * What kind of statistics are important to capture this input data
 
-
-
-	* 
+	* The necessary data for determining the IVs 
 
 
 
@@ -308,81 +197,18 @@ You are expected to create the python files - the code should run without errors
 
 
 
-	* (IVs) The experimental design for this simulated model will be a 2(Passenger flux rates: Low[___/min], High[___/min]) x 3(Active walk speed on escalator: null, Escalator Base Speed/2, Escalator Base Speed*2).
-
-
-
-	* (DV) Performance will be evaluated as a function of the count of passengers translated during a 1 hour period. The model will be run 10 times for each condition to provide an estimate of standard outcome deviation. 
-
-
-
-
-
-
+	* The passenger count data produced for each level of the experimental design (6 cells total) will be compiled into a .csv file such that each row contains IV labels (e.g., LowCongest HighActiveRate) as well as an outcome count produced by the simulation when run at that IV set. That setup will allow me to import the data into JASP and run a one-way ANOVA to determine whether either of the manipulated variables had an effect on the outcome counts as well as whether there is a significant interaction between the variables (significance determined in this case by a null-hypothesis test associated with p values less then .05).
 
 * What ways will you visualize your data - charts, and graphs you will create?
 
-
-
-    * The outcomes of this experiment will be best visualized as a combined bar chart including the mean count for each condition as well as an indication of standard deviation around those means. 
-
-
-
-
-
-
+    * The outcomes of this experiment will be best visualized as a combined bar chart including the mean count for each condition as well as an indication of standard error around those means. 
 
 * What clever way will you visualize your output with a useful infographic?
-
-
 
 	* 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Part 2: Creating a Model from Code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## (Part 2.1) **P**ortable **O**rganic **T**rouble-free **S**elf-watering System (**POTS**) Model **(10%)**
 
