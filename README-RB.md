@@ -34,7 +34,7 @@ The second part of the assignment explores data analysis. Data analysis and visu
 
 
 
-Mass transit is already a vital component for cities hosting large populations, and as populations continue to increase the importance of optimizing the capability of transit systems will only increase. Although the potential for remote work opportunities may somewhat mitigate the demand for mass transit options, the reality of climate change and the cost of personal transportation (vehicles, road maintanence, fuel transport, repair, etc.) will necessitate expansion of mass transit systems: the more we can understand about their design and use now may help to reduce negative reactions to the transition to reliance on mass transit such as subways and trains.
+Mass transit is already a vital component for cities hosting large populations, and as populations continue to increase the importance of optimizing the capability of transit systems will similarly increase. Although the potential for remote work opportunities may somewhat mitigate the demand for mass transit options, the reality of climate change and the cost of personal transportation (vehicles, road maintanence, fuel transport, repair, etc.) will necessitate expansion of mass transit systems: the more we can understand about their design and use now may help to reduce negative reactions to the transition to reliance on mass transit such as subways and trains.
 
 
 
@@ -177,7 +177,7 @@ You are expected to create the python files - the code should run without errors
 
 * Specify the independent and dependent input variables of your subway esclator model
 
-	(Assuming that input variables are the equivalent of the experimental design:) The 2 IVs - Congestion, and Active Passenger Move Rate - respectively have 2 (Congestion: Low, High) & 3(Rate: Null, Low, High) levels. There is a single DV - passenger count - which is determined by the total number of passengers that pass through the subway terminal during the alloted time. 
+	The 2 IVs - Congestion, and Active Passenger Move Rate - respectively have 2 (Congestion: Low, High) & 3(Rate: Null, Low, High) levels. There is a single DV - passenger count - which is determined by the total number of passengers that pass through the subway terminal during the alloted time. 
 
 * Specify where the data will come from measured subset of real data (empirical) or synthetic data
 
@@ -197,7 +197,7 @@ You are expected to create the python files - the code should run without errors
 
 * What clever way will you visualize your output with a useful infographic?
 
-	* 
+	The primary question I will be answering is whether passengers should walk up escalators (while others leave room to do so) or stand depending on current congestion conditions. Perhaps a graphic indicating that if "this many people are within arms reach" don't try to walk up the escalator would be an appropriate intuitive rule of thumb that could also contain some useful reference numbers for the effect of trying to be an active passenger when conditions aren't appropriate. 
 
 
 # Part 2: Creating a Model from Code
@@ -207,7 +207,7 @@ You are expected to create the python files - the code should run without errors
 
 Here [**we provide an overview**](code/POTS_system/README.md) of the **P**ortable **O**rganic **T**rouble-free **S**elf-watering System (**POTS**) Model and provide a source code template for the code found in  [**the following folder**](code/POTS_system/). Please create a **class** diagram of this model (replace the placeholder diagram). (you can use paper and pencil or a digital tool).
 
-
+![HighLevel](images/POTS-ClassDiagram.PNG)
 
 # Part 3: Data Analysis
 
