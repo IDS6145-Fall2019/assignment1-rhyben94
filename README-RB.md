@@ -236,81 +236,17 @@ Find a datasource that looks at part of this model - subway stations locations /
 ## (Part 3.2) -  Plotting 2D Random Number Generators **(15%)**
 
 
-This portion of the assignment looks at generating random numbers in Python and understanding how to properly plot them. Plot two different random numbers, pseudo random and quasi random, for five different N values. There should be 10 subplots, all properly formatted 2D plots. Note, each of the N points will have two coordinates, an x and a y, therefore you will need to generate two random numbers for each point. You should replace the image with your results in a simalar format. Discuss how the patterns differ. Feel free to change the N values from the suggested N values in the image to state your case.
+![HighLevel](images/RNGplots.PNG)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-![Image of 2d template City](images/2Dtemplate.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+I changed the second N value from 500 to 250 because I wanted to highlight that while there seems to be similar "randomness" at N=100 between the pseudo- and quasi-random number generators (just used random and sobol_seq), it becomes apparent even at N=250 that there is some design to the distribution of values in the quasi-random approach. The "connected diamonds" pattern becomes obvious by N=1000 and is only additionally filled in as N goes to infinity. On the other hand, the pseudo-random looks more "naturally" or organically random like a patch of sparse grass.
 
 
 ## (Part 3.3) -  Plotting 1D Random Distributions **(15%)**
 
 
+![HighLevel](images/DistributionsPlots.PNG)
 
-
-
-
-
-
-
-
-
-
-
-
-
-Now, choose three different distributions to plot in 1D, or as a histogram. Choose a pseudo-random generator and generate three different distributions. Example distributions are Uniform (part 8), Normal, Exponential, Poisson, and Chi-Squared, but feel free to use any three distributions of your choice. Again, plot each distribution for five different Ns. This will result in 15 different subplots, formatted similar to the image in Part 8. Include your properly formmated 1D plots below and breifly describe what we are looking at and how things change as N is changed.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Repeat the above using a quasi-random generator. Discuss the similarities and differences.
-
-
+As can be seen by comparing the first two rows, Sobol may have an unnatural pattern to it but it does provide a more reliable coverage of the sampled space. Comparison of the last two rows shows the difference in sampling outcomes between a continuous and discrete sampled space as the Chi-square becomes a closer approximation of its continuous form as the samples increase. 
 
 
 
