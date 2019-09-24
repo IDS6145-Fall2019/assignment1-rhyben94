@@ -340,7 +340,7 @@ By incrementing through time and keeping track of the number of passengers that 
 
 
 
-You are expected to create the python files - the code should run without errors, create and object(s) for your system, but not provide function detail.
+You are expected to create the python files - the code should run without errors, create and object(s) for your system, but not provide function detail
 
 
 
