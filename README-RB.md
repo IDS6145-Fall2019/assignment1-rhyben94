@@ -431,27 +431,27 @@ Extracting exact turnstile usage or counts of passengers serviced would require 
 
 
 
-![HighLevel](images/RidershipByDayandyear.PNG)
+![HighLevel](images/RidershipByDayandYear.PNG)
 
 As might be expected peak hour usage is much higher on the weekdays than weekends (perhaps businesses should consider adopting a new weekend - Monday and Tuesday in place of Saturday and Sunday; so long as enough industries adopted the change it wouldn't need to disrupt everyday life for most). Interestingly, ridership seems to be reducing according to the numbers provided by the MTA; however, most media points to increased ridership and decreased service (rather, number of subways running during peak hours) - I'm not sure what is causing the disconnect. 
 
-![HighLevel](images/MeansByday.PNG)
+![HighLevel](images/MeansByDay.PNG)
 
 The differences between the weekdays and the weekend days may be more cleanly analyzed by looking at the decrease in means between the given days. As this data set has been slightly transformed to represent potential peak hour usage these numbers may be misleading for Saturday and Sunday (which may not have clear peak hours), but the pattern of outcomes is still reflective of average ridership decreases on the weekend.
 
-![HighLevel](images/StandardDevsByday.PNG)
+![HighLevel](images/StandardDevsByDay.PNG)
 
 Of less practical interest besides perhaps from a social psychology perspective, the standard deviations of ridership across years for weekdays versus weekends may also be gleaned from the data set provided by the MTA. 
 
-![HighLevel](images/MeansByyear.PNG)
+![HighLevel](images/MeansByYear.PNG)
 
 This graph more clearly presents the apparent decrease in peak hour usage in the last few years. I cannot imagine that more individuals are choosing to drive in NY nor that there are simply fewer people, so again I'm not entirely sure what to make of this except that the numbers indicate a reduction in ridership. 
 
-![HighLevel](images/StandardDevsByyear.PNG)
+![HighLevel](images/StandardDevsByYear.PNG)
 
 Finally, there sees to be an inverse increase in general variance over the first half of this decade. 
 
-This data may be useful for informing a simulation investigating congestion during peak hours as it clearly shows that the question of interest relates to weekday traffic and should be careful to exclude any impact of ridership data gathered on weekends which may reduce the studied flow rates below what is relevant to actually solving the peak hour problem. 
+This data may be useful for informing a simulation investigating congestion during peak hours as it clearly shows that the question of interest relates to weekday traffic and should be careful to exclude any impact of ridership data gathered on weekends which may reduce the studied flow rates below what is relevant to actually solving the peak hour problem.
 
 
 ## (Part 3.2) -  Plotting 2D Random Number Generators **(15%)**
