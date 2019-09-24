@@ -427,27 +427,37 @@ Here [**we provide an overview**](code/POTS_system/README.md) of the **P**ortabl
 ## (Part 3.1) - Real Data **(10%)**
 
 
-Extracting exact turnstile usage or counts of passengers serviced would require pulling and processing very detailed analyses, but usable approximations may be garnered from rough estimates of daily ridership and the distribution across peak hours. Estimating that a little over half of ridership (say 65%) occurs during peak hours (0700-0900 & 1700-1900, 4 hours total) we can approximate a rough flow rate of passengers attempting to pass into and out of subway terminals. (there is some evidence to suggest that 65% may be a little high of an initial guesstimate, but the number will serve as a more conservative estimate; https://www.nbcnewyork.com/news/local/MTA-Subway-Service-Late-Night-Commuters-Off-Peak-Trains-Report-477794023.html). The New York MTA has shared some numbers regarding average subway ridership with respect to the past 6 years focusing on number of riders on weekdays versus Saturday or Sunday (http://web.mta.info/nyct/facts/ridership/) which may give some insight into expected peak hour usage (Ridership x 0.65/[NumPeakHours x NumSubwayTerminals] = Ridership x 0.65/[4x472]).
+Extracting exact turnstile usage or counts of passengers serviced would require pulling and processing very detailed analyses, but usable approximations may be garnered from rough estimates of daily ridership and the distribution across peak hours. Estimating that a little over half of ridership (say 65%) occurs during peak hours (0700-0900 & 1700-1900, 4 hours total) we can approximate a rough flow rate of passengers attempting to pass into and out of subway terminals. (there is some evidence to suggest that 65% may be a little high of an initial guesstimate, but the number will serve as a more conservative estimate; https://www.nbcnewyork.com/news/local/MTA-Subway-Service-Late-Night-Commuters-Off-Peak-Trains-Report-477794023.html). The New York MTA has shared some numbers regarding average subway ridership with respect to the past 6 years focusing on number of riders on weekdays versus Saturday or Sunday (http://web.mta.info/nyct/facts/ridership/) which may give some insight into expected peak hour usage (Ridership x 0.65/[NumPeakHours x NumSubwayTerminals] = Ridership x 0.65/[4 x 472]).
 
 
 
 ![HighLevel](images/SDataRidershipByDayandYear.PNG)
+![HighLevel](images/RidershipByDayandYear.PNG)
+![HighLevel](code/SubwayData/RidershipByDayandYear.PNG)
 
 As might be expected peak hour usage is much higher on the weekdays than weekends (perhaps businesses should consider adopting a new weekend - Monday and Tuesday in place of Saturday and Sunday; so long as enough industries adopted the change it wouldn't need to disrupt everyday life for most). Interestingly, ridership seems to be reducing according to the numbers provided by the MTA; however, most media points to increased ridership and decreased service (rather, number of subways running during peak hours) - I'm not sure what is causing the disconnect. 
 
 ![HighLevel](images/SDataMeansByDay.PNG)
+![HighLevel](images/MeansByDay.PNG)
+![HighLevel](code/SubwayData/MeansByDay.PNG)
 
 The differences between the weekdays and the weekend days may be more cleanly analyzed by looking at the decrease in means between the given days. As this data set has been slightly transformed to represent potential peak hour usage these numbers may be misleading for Saturday and Sunday (which may not have clear peak hours), but the pattern of outcomes is still reflective of average ridership decreases on the weekend.
 
 ![HighLevel](images/SDataStandardDevsByDay.PNG)
+![HighLevel](images/StandardDevsByDay.PNG)
+![HighLevel](code/SubwayData/StandardDevsByDay.PNG)
 
 Of less practical interest besides perhaps from a social psychology perspective, the standard deviations of ridership across years for weekdays versus weekends may also be gleaned from the data set provided by the MTA. 
 
 ![HighLevel](images/SDataMeansByYear.PNG)
+![HighLevel](images/MeansByYear.PNG)
+![HighLevel](code/SubwayData/MeansByYear.PNG)
 
 This graph more clearly presents the apparent decrease in peak hour usage in the last few years. I cannot imagine that more individuals are choosing to drive in NY nor that there are simply fewer people, so again I'm not entirely sure what to make of this except that the numbers indicate a reduction in ridership. 
 
 ![HighLevel](images/SDataStandardDevsByYear.PNG)
+![HighLevel](images/StandardDevsByYear.PNG)
+![HighLevel](code/SubwayData/StandardDevsByYear.PNG)
 
 Finally, there sees to be an inverse increase in general variance over the first half of this decade. 
 
