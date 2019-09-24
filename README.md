@@ -15,11 +15,7 @@ The second part of the assignment explores data analysis. Data analysis and visu
 
 # Part 1: Designing a Model - Subway System
 
-Mass transit is already a vital component for cities hosting large populations, and as populations continue to increase the importance of optimizing the capability of transit systems will only increase. Although the potential for remote work opportunities may somewhat mitigate the demand for mass transit options, the reality of climate change and the cost of personal transportation (vehicles, road maintanence, fuel transport, repair, etc.) will necessitate expansion of mass transit systems: the more we can understand about their design and use now may help to reduce negative reactions to the transition to reliance on mass transit such as subways and trains. 
-
-Some nations have already begun to feel the strain of populations that have grown beyond the capabilities of mass transit. Many videos captured in Japan and portions of China show passengers literally packed into underground transport cars by the force of several individuals, and while those snapshots may be amusing from the outside that discomfort is not a far off reality for cities such as New York or Washington D.C.
-
-The problem of human transportation is, of course, not a new one, and with the rapid technological advancements witnessed in the
+Please refer to the readme tagged "-RB" if that is acceptable. I found it helpful to maintain a readme that contained the original instructions so that I did not accidentally stray (too far) from the original objectives. Do let me know in the future if a single ReadMe is preferred and I will eliminate the original prior to my final commit. 
 
 
 ![Image of Subway City System](images/subway_model.png)
